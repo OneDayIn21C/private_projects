@@ -20,17 +20,16 @@
 <body>
   <main class="invitation">
 
-    <!-- ===== COVER (full-bleed) ===== -->
+    <!-- ===== COVER ===== -->
     <section class="cover" id="cover">
-      <div class="cover__bg">
-        <img src="images/main.jpg" alt="최인범 김보현 본식 사진" />
-      </div>
+      <div class="cover__bg"><img src="images/main.jpg" alt="최인범 김보현" /></div>
       <div class="cover__shade"></div>
+      <div class="petals" id="coverPetals"></div>
       <div class="cover__inner">
         <p class="cover__eyebrow">THE MARRIAGE OF</p>
         <h1 class="cover__names">
           <span>최인범</span>
-          <span class="cover__amp">&amp;</span>
+          <span class="cover__amp">♥</span>
           <span>김보현</span>
         </h1>
         <div class="cover__rule"></div>
@@ -40,13 +39,14 @@
       <div class="cover__scroll"><span></span></div>
     </section>
 
-    <!-- ===== INTRO LINE ===== -->
+    <!-- ===== INTRO ===== -->
     <section class="intro reveal">
       <p class="intro__en">we are getting married</p>
       <p class="intro__ko">
         서로의 계절이 되어주기로 한 날,<br />
         두 사람이 부부가 됩니다.
       </p>
+      <div class="bloom">❀</div>
     </section>
 
     <!-- ===== GREETING ===== -->
@@ -72,11 +72,11 @@
       </div>
     </section>
 
-    <!-- ===== INTERLUDE PHOTO 1 ===== -->
-    <section class="interlude interlude--top reveal" id="interlude1">
-      <img src="images/gallery-2.jpg" alt="" />
-      <div class="interlude__shade"></div>
-      <p class="interlude__quote">함께 걷는 모든 길이<br />봄이기를</p>
+    <!-- ===== FEATURED (최애) ===== -->
+    <section class="featured reveal" id="featured">
+      <img src="images/featured.jpg" alt="최인범 김보현" />
+      <div class="featured__shade"></div>
+      <p class="featured__quote">함께 걷는 모든 길이<br />봄이기를</p>
     </section>
 
     <!-- ===== CALENDAR / D-DAY ===== -->
@@ -94,7 +94,7 @@
         <div class="cal__dow cal__sat">SAT</div>
       </div>
 
-      <p class="dday" id="dday">최인범 ♡ 김보현의 결혼식이 <b></b> 남았습니다</p>
+      <p class="dday" id="dday">최인범 ♥ 김보현의 결혼식이 <b></b> 남았습니다</p>
     </section>
 
     <!-- ===== GALLERY ===== -->
@@ -104,11 +104,11 @@
       <div class="gallery__grid" id="galleryGrid"><!-- injected --></div>
     </section>
 
-    <!-- ===== INTERLUDE PHOTO 2 ===== -->
-    <section class="interlude interlude--bottom reveal" id="interlude2">
-      <img src="images/gallery-5.jpg" alt="" />
-      <div class="interlude__shade"></div>
-      <p class="interlude__quote">오늘보다 내일<br />더 사랑하겠습니다</p>
+    <!-- ===== INTERLUDE (화사) ===== -->
+    <section class="featured featured--bright reveal" id="interlude1">
+      <img src="images/interlude-1.jpg" alt="" />
+      <div class="featured__shade"></div>
+      <p class="featured__quote">오늘보다 내일<br />더 사랑하겠습니다</p>
     </section>
 
     <!-- ===== LOCATION ===== -->
@@ -166,9 +166,10 @@
 
     <!-- ===== FOOTER ===== -->
     <footer class="footer reveal">
-      <div class="footer__bg"><img src="images/gallery-3.jpg" alt="" /></div>
+      <div class="footer__bg"><img src="images/footer.jpg" alt="" /></div>
       <div class="footer__shade"></div>
       <div class="footer__inner">
+        <div class="bloom bloom--light">❀</div>
         <p class="footer__thanks">저희 두 사람의 시작을<br />축복해 주셔서 감사합니다.</p>
         <p class="footer__names">최인범 &amp; 김보현</p>
         <button class="footer__share" id="shareBtn">청첩장 공유하기</button>

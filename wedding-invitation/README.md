@@ -19,15 +19,13 @@ wedding-invitation/
 `images/` 폴더에 아래 파일명으로 사진을 저장하면 자동으로 표시됩니다.
 (파일명은 정확히 지켜주세요. 사진이 없어도 페이지는 정상 동작합니다.)
 
-| 파일명 | 위치 | 추천 사진 |
-| --- | --- | --- |
-| `images/main.jpg` | 표지 메인 | 나무문 앞 손잡은 사진 (메인) |
-| `images/gallery-1.jpg` | 갤러리 1 | 나무문 앞 사진 |
-| `images/gallery-2.jpg` | 갤러리 2 | 정원/나무 사이 사진 |
-| `images/gallery-3.jpg` | 갤러리 3 | 계단에 앉은 사진 |
-| `images/gallery-4.jpg` | 갤러리 4 | 계단 옆 신부 단독 사진 |
-| `images/gallery-5.jpg` | 갤러리 5 | 계단에서 손잡은 사진 |
-| `images/gallery-6.jpg` | 갤러리 6 | 원하는 추가 사진 |
+| 파일명 | 위치 |
+| --- | --- |
+| `images/main.jpg` | 표지 (메인) |
+| `images/featured.jpg` | 인사말 다음 대표 컷 (최애) |
+| `images/interlude-1.jpg` | 중간 큰 사진 |
+| `images/footer.jpg` | 마지막 배경 |
+| `images/gallery-1.jpg` ~ `gallery-9.jpg` | 갤러리 9장 |
 
 > 갤러리 사진 개수를 바꾸려면 `script.js`의 `GALLERY_COUNT` 값을 수정하세요.
 
