@@ -1,6 +1,6 @@
 /* ===== CONFIG ===== */
 var WEDDING = new Date("2026-09-12T17:40:00+09:00");
-var GALLERY_COUNT = 6; // images/gallery-1.jpg ... gallery-6.jpg
+var GALLERY_COUNT = 5; // images/gallery-1.jpg ... gallery-5.jpg
 
 /* ===== CALENDAR (September 2026) ===== */
 (function buildCalendar() {
