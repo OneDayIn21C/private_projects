@@ -129,6 +129,49 @@ document.querySelectorAll(".account__copy").forEach(function (btn) {
   });
 })();
 
+/* ===== BACKGROUND MUSIC ===== */
+(function music() {
+  var audio = document.getElementById("bgm");
+  var btn = document.getElementById("musicBtn");
+  if (!audio || !btn) return;
+
+  // 음원 파일이 없으면 버튼 숨김 (audio/bgm.mp3 추가 전)
+  audio.addEventListener("error", function () { btn.style.display = "none"; });
+
+  audio.volume = 0.45;
+  var playing = false;
+
+  function setState(on) {
+    playing = on;
+    btn.classList.toggle("playing", on);
+    btn.classList.toggle("idle", !on);
+  }
+  function play() { var p = audio.play(); if (p && p.then) p.then(function(){ setState(true); }).catch(function(){ setState(false); }); else setState(true); }
+  function pause() { audio.pause(); setState(false); }
+
+  btn.classList.add("idle");
+
+  btn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    if (playing) pause(); else play();
+  });
+
+  // 열자마자 자동재생 시도 → 막히면 첫 터치 때 재생
+  function tryAuto() { var p = audio.play(); if (p && p.then) p.then(function(){ setState(true); }).catch(function(){ armFirstGesture(); }); }
+  function armFirstGesture() {
+    function once() {
+      play();
+      document.removeEventListener("touchstart", once);
+      document.removeEventListener("click", once);
+      document.removeEventListener("scroll", once);
+    }
+    document.addEventListener("touchstart", once, { once: true });
+    document.addEventListener("click", once, { once: true });
+    document.addEventListener("scroll", once, { once: true, passive: true });
+  }
+  tryAuto();
+})();
+
 /* ===== SCROLL REVEAL ===== */
 (function reveal() {
   var els = document.querySelectorAll(".reveal, .gallery__item");

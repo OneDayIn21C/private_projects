@@ -262,6 +262,36 @@ img { display: block; }
 }
 .footer__share:active { background: rgba(255,255,255,0.3); transform: scale(0.97); }
 
+/* ===== MUSIC BUTTON ===== */
+.music-btn {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 90;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.6);
+  background: rgba(74,107,74,0.32);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+  transition: background 0.25s, transform 0.2s;
+}
+.music-btn:active { transform: scale(0.92); }
+.music-btn__icon { font-size: 1.1rem; line-height: 1; }
+/* 재생 중: 빙글빙글 + 살짝 강조 */
+.music-btn.playing { background: rgba(232,169,180,0.5); }
+.music-btn.playing .music-btn__icon { animation: spin 3.2s linear infinite; }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+/* 음악 대기 상태 살짝 콩닥 (첫 터치 유도) */
+.music-btn.idle { animation: musicpulse 1.8s ease-in-out infinite; }
+@keyframes musicpulse {
+  0%, 100% { box-shadow: 0 4px 14px rgba(0,0,0,0.2); }
+  50% { box-shadow: 0 4px 22px rgba(232,169,180,0.8); }
+}
+
 /* ===== LIGHTBOX ===== */
 .lightbox { position: fixed; inset: 0; background: rgba(35,30,28,0.95); display: none; align-items: center; justify-content: center; z-index: 100; }
 .lightbox.open { display: flex; }
